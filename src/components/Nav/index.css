@@ -1,0 +1,21 @@
+.nav {
+  list-style: none;
+  z-index: 999;
+  background-color: rgba(0,0,0,0);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav li {
+  width: 0.3rem;
+  height: 0.3rem;
+  border: 0.01rem solid #fff;
+  background-color: rgba(0,0,0,0);
+  border-radius: 0.2rem;
+  margin-top: 0.15rem;
+}
+
+.active {
+  background-color:#fff !important;
+  transition: backgroundColor 500ms ;
+}
