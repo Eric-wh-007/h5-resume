@@ -3,8 +3,9 @@ export interface CommomProps {
 }
 
 export interface NavProps {
-  activeKey: string;
-  routes: RouteConfig[];
+  activeKey?: string;
+  paths: string[];
+  defaultActiveKey: string;
 }
 
 export interface RouteConfig {

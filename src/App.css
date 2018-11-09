@@ -3,27 +3,41 @@
   height: 100%;
   width: 100%;
 }
+.App {
+  height: 100%;
+}
 
 .appEnter {
   top:100%;
   width: 100%;
   position: absolute;
-}
-
-.App {
-  height: 100%;
+  transition: top 0.7s cubic-bezier(.825,0,.5,1);
 }
 
 .appEnterActive {
   width: 100%;
   top:0;
-  transition: top 1s linear;
+  transition: top 0.7s cubic-bezier(.825,0,.5,1);
+  position: absolute;
+}
+
+.appExit {
+  width: 100%;
+  top:0;
+  transition: top 0.7s cubic-bezier(.825,0,.5,1);
+  position: absolute;
+}
+
+.appExitActive {
+  width: 100%;
+  top:-100%;
+  transition: top 0.7s cubic-bezier(.825,0,.5,1);
   position: absolute;
 }
 
 .navContainer {
   z-index: 1;
-  position: absolute;
+  position: fixed;
   right: 0.2rem;
   height: 100%;
   display: flex;

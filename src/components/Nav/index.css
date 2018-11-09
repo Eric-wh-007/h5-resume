@@ -15,6 +15,14 @@
   margin-top: 0.15rem;
 }
 
+.link {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.linkL:focus {
+  outline: none;
+}
+
 .active {
   background-color:#fff !important;
   transition: backgroundColor 500ms ;

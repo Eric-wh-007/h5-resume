@@ -1,13 +1,5 @@
-import NotFound from './NotFound';
-import Head from './Head';
-import Introduction from './Introduction';
-import WorkExp from './WorkExp';
-import ProjectExp from './ProjectExp';
+import Home from './Home';
 
 export {
-  NotFound,
-  Head,
-  Introduction,
-  WorkExp,
-  ProjectExp
+  Home,
 }
