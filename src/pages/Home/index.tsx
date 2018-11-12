@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 import { Head, Instroduction, ProjectExp, WorkExp } from '../../components';
-import { CommomProps } from '../../interfaces';
+import { HomeProps } from '../../interfaces';
+import style from './index.css';
 
-class Home extends Component<CommomProps> {
+class Home extends Component<HomeProps> {
   public render() {
-    const { height } = this.props;
+    const { height, top } = this.props;
     return (
-      <div>
+      <div style={{top}} className={style.home} id='home'>
         <div id='head'><Head height={height} /></div>
         <div id='instroduction'><Instroduction height={height} /></div>
         <div id='workExp'><WorkExp height={height} /></div>
