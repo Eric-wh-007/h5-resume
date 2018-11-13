@@ -1,3 +1,39 @@
 .workexp {
-  background: #ed6d50;
+  /* background: #ed6d50; */
+  background-color: #e79c47;
+  color: #fff;
+  padding-left: 0.3rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.title {
+  padding-left: 0.5rem;
+  display: inline-block;
+  font-size: 0.25rem;
+  line-height: 2rem;
+  height: 100%;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 0.2rem;
+  padding: 0.3rem;
+  max-width: 80%;
+  text-indent: 2em;
 }

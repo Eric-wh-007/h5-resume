@@ -1,26 +1,33 @@
 .head {
   background: #36465d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #fff;
+  text-align: center;
 }
 
 .avatar {
-  background-image: url('../../static/imgs/genji.jpeg');
-  width: 1.5rem;
-  height: 1.5rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.avatar p {
+  font-size: 0.5rem;
+}
+
+.avatar img {
   box-shadow: 0px 0px 20px 1px #fff;
-  margin-bottom: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 }
 
 .quote p {
-  font-size: 0.3rem;
+  padding-top:0.7rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.links {
+  padding-top:0.7rem;
 }
 
 .links ul {
@@ -31,14 +38,17 @@
 }
 
 .links ul li {
-  margin-left: 0.1rem;
-  height: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .links a{
   color: #fff;
   text-decoration: none;
   font-size: 0.2rem;
-  line-height: 0.3rem;
-  height: 0.3rem;
+}
+.links a img {
+  width: 1rem;
+  height: 1rem;
 }

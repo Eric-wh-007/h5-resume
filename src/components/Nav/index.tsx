@@ -14,7 +14,7 @@ class NavBar extends Component<NavProps>{
     const { links, activeKey } = this.props;
     return (
       <Fragment>
-        <ul className={style.nav} >
+        <div className={style.nav} >
           {
             links.map(({name, icon}) => {
               return (<a
@@ -26,7 +26,7 @@ class NavBar extends Component<NavProps>{
               </a>)
             })
           }
-        </ul>
+        </div>
       </Fragment>
     );
   }

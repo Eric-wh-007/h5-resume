@@ -1,3 +1,35 @@
 .introduction {
   background-color: #56bb8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  width: 90%;
+}
+
+.imgContainer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 99%;
+}
+
+.imgContainer span {
+  font-size: 0.38rem;
+  line-height: 2rem;
+  text-align: center;
+  padding-left: 0.4rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.imgContainer img {
+  width: 1.6rem;
+  height: 1.6rem;
 }
