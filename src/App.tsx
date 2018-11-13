@@ -4,6 +4,7 @@ import { Home } from './pages';
 import { NavBar } from './components';
 import { links } from './common/constants';
 import style from './App.css';
+import { debounce } from './utils';
 
 interface State {
   screenHeight: number;
@@ -19,7 +20,6 @@ class App extends React.Component<any, State> {
     screenHeight: 0,
     top: 0,
     curActiveKeyIndex: 0,
-
   }
 
   public componentDidMount = () => {
@@ -27,17 +27,19 @@ class App extends React.Component<any, State> {
     this.setState({
       screenHeight
     })
-    document.addEventListener('mousewheel', this.handleMouseWheel)
+    document.addEventListener('mousewheel', debounce(this.handleMouseWheel, 50, true))
     document.addEventListener('touchstart', this.handelTouchStart);
     document.addEventListener('touchend', this.handleTouchEnd);
   }
 
   public componentWillUnmount = () => {
-    document.removeEventListener('mousewheel', this.handleMouseWheel);
+    document.removeEventListener('mousewheel', debounce(this.handleMouseWheel, 50, true));
+    document.removeEventListener('touchstart', this.handelTouchStart);
+    document.removeEventListener('touchend', this.handleTouchEnd);
   }
 
   private handleMouseWheel = (e: any) => {
-    console.log('wheel', e.pageX, e.pageY)
+    e.wheelDeltaY < 0 ? this.updateHomeTop('up') : this.updateHomeTop('down');
   }
 
   private handleNavChange = (key: string) => {
@@ -47,15 +49,10 @@ class App extends React.Component<any, State> {
     })
   }
 
-  private getActiveTop = (key: string, scrollDistance?: number): number => {
-    console.log('scrollDistance: ', scrollDistance);
+  private getActiveTop = (key: string): number => {
     const { screenHeight } = this.state;
     const index = links.findIndex(({ name }) => name === key);
-    let top = screenHeight * index;
-    if(scrollDistance) {
-      top = top + scrollDistance;
-    }
-    console.log(`${top} px`);
+    const top = screenHeight * index;
     return -top;
   }
 
@@ -73,23 +70,21 @@ class App extends React.Component<any, State> {
     } else if (distance < 0 && Math.abs(distance) > value) {  // 手指往上划 并且距离足够 top为负
       this.updateHomeTop('up');
     }
-
-    
   }
 
-  private updateHomeTop = (direction: 'up'| 'down'):void => {
+  private updateHomeTop = (direction: 'up' | 'down'): void => {
     const { screenHeight, curActiveKeyIndex } = this.state;
     let top;
     let activeIndex = curActiveKeyIndex;
-    if(direction === 'up') {  // 手指往上划 并且距离足够 top为负
+    if (direction === 'up') {  // 手指往上划 并且距离足够 top为负
       activeIndex++;
-      if(activeIndex >= links.length) { // 移动超出屏幕
+      if (activeIndex >= links.length) { // 移动超出屏幕
         return;
       }
       top = - activeIndex * screenHeight;
-    }else { // 手指往下划 并且距离足够 top为正
+    } else { // 手指往下划 并且距离足够 top为正
       activeIndex--;
-      if(activeIndex < 0) { // 移动超出屏幕
+      if (activeIndex < 0) { // 移动超出屏幕
         return;
       }
       top = - activeIndex * screenHeight;
@@ -104,13 +99,11 @@ class App extends React.Component<any, State> {
   public render() {
     const { curActiveKeyIndex, top, screenHeight } = this.state;
     const activeMenuKey = links[curActiveKeyIndex].name;
-    // console.log(screenHeight);
     return (
       <div
         className={style.AppContainer}
-        style={{height:screenHeight}}
-        // onTouchStart={this.handelTouchStart}
-        // onTouchMove={this.handleTouchEnd}
+        style={{ height: screenHeight }}
+        id='app'
       >
         <div className={style.navContainer}>
           <NavBar links={links} activeKey={activeMenuKey} onChange={this.handleNavChange} />
