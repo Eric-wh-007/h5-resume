@@ -21,9 +21,7 @@ class NavBar extends Component<NavProps>{
                 key={name}
                 className={classnames([style.link, activeKey === name ? style.active : ''])}
                 onClick={this.handleChange.bind(this, name)}
-              >
-                {activeKey === name ? icon : ''}
-              </a>)
+              />)
             })
           }
         </div>
