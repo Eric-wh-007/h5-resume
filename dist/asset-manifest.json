@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.2aacf2e3.css",
-  "main.css.map": "static/css/main.2aacf2e3.css.map",
-  "main.js": "static/js/main.a683da2f.js",
-  "main.js.map": "static/js/main.a683da2f.js.map"
+  "main.css": "static/css/main.552e13d9.css",
+  "main.css.map": "static/css/main.552e13d9.css.map",
+  "main.js": "static/js/main.b985de5f.js",
+  "main.js.map": "static/js/main.b985de5f.js.map",
+  "static/media/birthday.svg": "static/media/birthday.926c9816.svg",
+  "static/media/blog.svg": "static/media/blog.f5d4989d.svg",
+  "static/media/email.svg": "static/media/email.23a7dee5.svg",
+  "static/media/gago.svg": "static/media/gago.90e1625d.svg",
+  "static/media/github.svg": "static/media/github.5eda4e27.svg",
+  "static/media/phone.svg": "static/media/phone.44071f09.svg",
+  "static/media/school.svg": "static/media/school.721cc5f8.svg",
+  "static/media/tencent.svg": "static/media/tencent.61568913.svg",
+  "static/media/web.svg": "static/media/web.70a4e6e0.svg"
 }
