@@ -3,6 +3,7 @@ import Head from './Head';
 import Instroduction from './Introduction';
 import ProjectExp from './ProjectExp';
 import WorkExp from './WorkExp';
+import Skills from './Skills';
 
 export {
   NavBar,
@@ -10,4 +11,5 @@ export {
   Instroduction,
   ProjectExp,
   WorkExp,
+  Skills,
 }

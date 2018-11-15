@@ -8,7 +8,7 @@ export interface HomeProps extends CommomProps {
 
 export interface Link {
   name: string;
-  icon: string;
+  icon?: string;
 }
 
 export interface NavProps {

@@ -31,7 +31,6 @@ const head = {
     },
   ]
 }
-
 const intro = [
   {
     name: '生日',
@@ -98,10 +97,41 @@ const projectExp = [
   }
 ];
 
+const skills = [
+  {
+    name: 'React',
+    percent: 83
+  },
+  {
+    name: 'HTML',
+    percent: 88,
+  },
+  {
+    name: 'CSS',
+    percent: 81,
+  },
+  {
+    name: 'Javascript',
+    percent: 82,
+  },
+  {
+    name: 'Typescript',
+    percent: 80,
+  },
+  {
+    name: 'Vue',
+    percent: 70,
+  },
+  {
+    name: 'Angular',
+    percent:40,
+  }
+]
 
 export {
   head,
   intro,
   workExp,
   projectExp,
+  skills
 }

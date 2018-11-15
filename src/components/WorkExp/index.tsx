@@ -6,7 +6,7 @@ import { workExp } from '../../common/data';
 
 class WorkExp extends Component<CommomProps> {
   public componentDidMount() {
-    document.body.style.backgroundColor = '#ed6d50';
+    document.body.style.backgroundColor = '#b8cca6';
   }
   public render() {
     const { height } = this.props;
