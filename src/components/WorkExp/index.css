@@ -1,6 +1,6 @@
 .workexp {
   /* background: #ed6d50; */
-  background-color: #e79c47;
+  background-color: #b8cca6;
   color: #fff;
   padding-left: 0.3rem;
 }
@@ -32,8 +32,8 @@
 }
 
 .desc {
-  font-size: 0.2rem;
-  padding: 0.3rem;
+  font-size: 0.3rem;
+  padding: 0.2rem;
   max-width: 80%;
   text-indent: 2em;
 }
