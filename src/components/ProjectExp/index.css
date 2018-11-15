@@ -29,6 +29,13 @@
   font-size: 0.4rem;
 }
 
+.remark {
+  font-size: 0.2rem;
+  font-weight: normal;
+  float: right;
+  line-height: 100%;
+}
+
 .desc {
   font-size: 0.3rem;
   text-indent: 2em;

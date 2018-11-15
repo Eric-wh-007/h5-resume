@@ -16,10 +16,10 @@ class ProjectExp extends Component<CommomProps> {
         <section className={style.projectexp} style={{ height: `${height}px` }} >
           <div className={style.container}>
             {
-              projectExp.map(({ name, desc }) => {
+              projectExp.map(({ name, desc, remark }) => {
                 return (
                   <div key={name} className={style.main}>
-                    <h4 className={style.title}>{name}</h4>
+                    <h4 className={style.title}>{name} <span className={style.remark}>{remark}</span></h4>
                     <p className={style.desc}>{desc}</p>
                   </div>
                 )
