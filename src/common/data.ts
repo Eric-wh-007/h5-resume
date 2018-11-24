@@ -1,4 +1,4 @@
-import avatarSrc from '../static/imgs/genji.jpeg'
+import avatarSrc from '../static/imgs/avatar.jpg'
 import githubSrc from '../static/imgs/github.svg';
 import blogSrc from '../static/imgs/blog.svg';
 import websiteSrc from '../static/imgs/web.svg';

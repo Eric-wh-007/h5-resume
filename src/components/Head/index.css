@@ -12,6 +12,16 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-size: 100%;
+}
+
+.avatar > div {
+  background-repeat: no-repeat; 
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-position: center center;
+  background-size: 100%;
 }
 
 .avatar p {

@@ -15,7 +15,8 @@ class Head extends Component<CommomProps> {
       <Fragment>
         <section className={style.head} style={{ height: `${height}px` }}>
           <div className={style.avatar} >
-            <img src={avatar} alt="avatar" />
+            {/* <img src={avatar} alt="avatar" /> */}
+            <div style={{backgroundImage: `url(${avatar})`}} />
             <p>{author}</p>
           </div>
           <div className={style.quote}>
