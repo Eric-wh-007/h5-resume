@@ -26,7 +26,7 @@ const head = {
     },
     {
       icon: websiteSrc,
-      href: 'http://www.wanghang.cool',
+      href: 'https://eric-wh-007.github.io/',
       name: 'website'
     },
   ]
